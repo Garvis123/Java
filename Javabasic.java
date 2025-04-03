@@ -1,44 +1,25 @@
 
 public class Javabasic {
     public static void main(String[] args) {
-       
-   int r=4;
-  
-   
-  for(int i=1;i<=r;i++)
-  {
-    for(int k=1 ;k<=i;k++)
+      
+      int n=5; 
+      
+    for(int i=1;i<=n;i++)
     {
-      System.out.print("*");
-    }
-    for(int j =1;j<=2*(r-i);j++)
-    {
+      for(int j=1;j<=n-i;j++)
+      {
       System.out.print(" ");
+      }
+      for(int j=i;j>=1;j--)
+      {
+        System.out.print(i);
+      }
+      for(int j=2;j<=i;j++)
+      {
+System.out.print(i);
+      }
+      System.out.println();
     }
-    for(int k=1 ;k<=i;k++)
-    {
-      System.out.print("*");
-    }
-    System.out.println();
-  }
-
-  for(int i=r;i>=1;i--)
-  {
-    for(int k=1 ;k<=i;k++)
-    {
-      System.out.print("*");
-    }
-    for(int j =1;j<=2*(r-i);j++)
-    {
-      System.out.print(" ");
-    }
-    for(int k=1 ;k<=i;k++)
-    {
-      System.out.print("*");
-    }
-    System.out.println();
-  }
-
    
     }
 }
