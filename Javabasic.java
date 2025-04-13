@@ -2,17 +2,22 @@ import java.util.Scanner;
 
 public class Javabasic {
 
-  public static int product(int a ,int b)
-  {
-     return a*b;
-  }
+  public boolean isPalindrome(int x) {
+    int reverse=0;
+    int b=x;
+    while(x>0)
+    {
+        int last = x%10;
+        reverse=last + (reverse*10);
+        x=x/10;
+      }
+      if(reverse=b)
+      {
+          return true;
+      }
+}
     public static void main(String[] args) {
-       Scanner sc= new Scanner(System.in);
-       System.out.print("enter number a: ");
-       int a = sc.nextInt();
-       System.out.print("enter number b: ");
-       int b = sc.nextInt();
-      int p= product(a,b);
-      System.out.print("Product is: " + p);
+      int x=121;
+      isPalindrome(x);
   }
 }
