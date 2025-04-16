@@ -1,18 +1,18 @@
+
 public class Javabasic {
 
-  public static boolean isPalindr(int x) {
-    int reverse = 0;
-    int b = x;
-    while (x > 0) {
-      int last = x % 10;
-      reverse = last + (reverse * 10);
-      x = x / 10;
+  public static void main(String args[]) {
+   int arr[]={2,7,11,15};
+   int s=9;
+   for(int i=0;i<arr.length;i++)
+   {
+    for(int j=0;j<=arr.length;j++)
+    {
+         if(arr[i]+arr[j]==s)
+         {
+            System.out.println(i+ ", " + j);
+         }
     }
-    return reverse == b;
-  }
-
-  public static void main(String[] args) {
-    int x = 121;
-    System.out.println(isPalindr(x));  // ✅ Works now
-  }
+   }
+}
 }
