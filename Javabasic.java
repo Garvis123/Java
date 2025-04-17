@@ -1,18 +1,33 @@
+public class Javabasic{
 
-public class Javabasic {
-
-  public static void main(String args[]) {
-   int arr[]={2,7,11,15};
-   int s=9;
-   for(int i=0;i<arr.length;i++)
-   {
-    for(int j=0;j<=arr.length;j++)
+    public static void main(String args[])
     {
-         if(arr[i]+arr[j]==s)
-         {
-            System.out.println(i+ ", " + j);
-         }
-    }
-   }
+        int arr[]={1,2,3,4,5,6,7,8};
+        int start=0;
+        int end =arr.length-1;
+        int k=2;
+        int n = arr.length;
+        // while(start<end)
+        // {
+        //     int temp=arr[end];
+        //     arr[end]=arr[start];
+        //     arr[start]=temp;
+        //    start++;
+        //    end--;
+
+        // }
+        for(int i=0;i<n-k-1;i++)
+        {
+            int temp=arr[end];
+            arr[end]=arr[start];
+            arr[start]=temp;
+           start++;
+           end--;
+        }
+        
+        for(int i=0;i<arr.length;i++)
+{
+    System.out.print(arr[i]);
 }
+    }
 }
