@@ -1,36 +1,27 @@
 package Array;
 
 public class SubArray {
-    public static void Subrray(int num[])
+    public static int Subrray(int num[])
     {
-      int curr=0;
-      int maxSum=Integer.MIN_VALUE;
-      for(int i=0;i<num.length;i++)
+     int product=1;
+     int maxp=num[0];
+     for(int i=0;i<num.length;i++)
+     {
+      product=product*num[i];
+      if(product>maxp)
       {
-        int start=i;
-        for(int j=i;j<num.length;j++)
-        {
-          int end = j;
-          curr=0;
-          for(int k=start;k<=end;k++)
-          {
-            System.out.print("("+num[k] + ") ");
-
-            curr=curr+num[k];
-          }
-          System.out.println(curr);
-          if(maxSum < curr)
-          {
-maxSum=curr;
-          }
-        }
-        System.out.println();
+        maxp=product;
       }
-      System.out.println();
-    }
+      if(product<0)
+      {
+        product=0;
+      }
+     }
+     return maxp;
+      }
     public static void main(String args[])
     {
-        int num[]={2,4,6,8,10};
-        Subrray(num);
+        int num[]={4, 5, 3, 7, 1, 2};
+        System.out.print(Subrray(num));
     }
 }
