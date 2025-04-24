@@ -1,6 +1,6 @@
-import java.util.Arrays;
+package Array;
 
-public class Javabasic{
+public class Containerwithwater {
     public static int find(int height[])
     {
         int left=0;
