@@ -3,7 +3,12 @@ package String;
 public class ReverseEach {
     // input - i am an educator 
     // output i ma na rotacude
-    public String reverseWords(String s) {
+    public static void main(String args[])
+    {
+        String s="this is an amazing program";
+        reverseWords(s);
+    }
+    public static String reverseWords(String s) {
         StringBuilder ans = new StringBuilder();
         StringBuilder sb = new StringBuilder();
 
