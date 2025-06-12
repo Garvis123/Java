@@ -1,23 +1,25 @@
 public class OOPS {
     public static void main(String args[])
     {
-       Horse h=new Horse();
-    h.eat();
-    h.walk();
+     Student s1=new Student("aman",23);
+     System.out.print(s1.name);
+System.out.print(s1.age);
 
 
     }
 }
- 
-abstract class Animal{ 
-       void eat()
-       {
-        System.out.println("animal eats");
-       }
-       abstract void walk();
+
+class Student{
+    String name;
+    int age;
+
+    
+    Student(String name,int age)
+    {
+        this.name=name;
+        this.age=age;
+        System.out.print("hello");
+    }
 }
 
-class Horse extends Animal {
-    void walk(){System.out.print("Horse can walk");}
-}
 
