@@ -1,25 +1,22 @@
 public class Javabasic {
 
-    public static int Power(int x,int n)
+    public static boolean Sorted(int arr[],int idx)
     {
-        if(n==0)
+        if(idx==arr.length-1)
         {
-            return 1;
+            return true;
         }
-        if(x==0)
+        if(arr[idx]>arr[idx+1])
         {
-            return 0;
+            return false;
         }
-        int halfPower=Power(x, n/2);
-        int sqaurePow=halfPower*halfPower;
-        if(n%2!=0)
-        {
-            sqaurePow = x*sqaurePow;
-        }
-        return sqaurePow;
+        return Sorted(arr, idx+1);
+
     }
     public static void main(String args[])
     {
-       System.out.print(Power(2,10));
+     int arr[]={1,2,3,5,4};
+     int idx=0;
+     System.out.print(Sorted(arr,idx));
     }
 }
