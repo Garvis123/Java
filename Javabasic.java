@@ -1,23 +1,25 @@
 public class Javabasic {
-    public static void main(String[] args) {
-        int arr[] = {1,2,3};
-        int k = 3;
-        int count=0;
 
-        System.out.println("Subarrays with sum = " + k + ":");
-
-        for (int i = 0; i < arr.length; i++) {
-            int sum = 0;
-            for (int j = i; j < arr.length; j++) {
-                sum += arr[j];
-
-                if (sum == k) {
-                    // Print subarray from i to j
-                    count++;
-                    
-                }
-            }
+    public static int Power(int x,int n)
+    {
+        if(n==0)
+        {
+            return 1;
         }
-        System.out.print(count);
+        if(x==0)
+        {
+            return 0;
+        }
+        int halfPower=Power(x, n/2);
+        int sqaurePow=halfPower*halfPower;
+        if(n%2!=0)
+        {
+            sqaurePow = x*sqaurePow;
+        }
+        return sqaurePow;
+    }
+    public static void main(String args[])
+    {
+       System.out.print(Power(2,10));
     }
 }
