@@ -9,7 +9,7 @@ public class ReverseString {
             // str=str.trim();
             return;
         }
-        System.out.print(str.trim().charAt(idx));
+        System.out.print(str.charAt(idx));
         // str=str.trim();
         reverse(str, idx-1);
     }
