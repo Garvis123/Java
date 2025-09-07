@@ -1,12 +1,28 @@
+import JavaBasic.Palidrome;
+
 public class Javabasic {  
+   public static void Palidromee(String a)
+   {
+      int i =0;
+      int j=a.length()-1;
+      for(int k=0;k<j;k++)
+      {
+         
+         if(a.charAt(i)==a.charAt(j))
+         {
+            i++;
+            j--;
+         }
+         else 
+         {
+            break;
+         }
+         System.out.print("It is a palidrome");
+      }
+   } 
    public static void main(String args[])
    {
-    int arr[]={1,2,3,4,5};
-     int largest=Integer.MIN_VALUE;
-     for(int i=0;i<arr.length;i++)
-     {
-        largest=Math.max(largest,arr[i]);
-     }
-     System.out.println(largest);
+    String a="anna";
+    Palidromee(a);
    }
 }
