@@ -266,24 +266,48 @@ public class linklist {
         }
         System.out.println();
     }
+
+
+    public static boolean Cycle()
+    {
+       Node slow=head;
+       Node fast=head;
+     while(fast!=null && fast.next!=null)
+     {
+            fast=fast.next.next;//+2
+            slow=slow.next;//+1
+            if(fast==slow)
+            {
+               return true;//cycle exists 
+            }
+        }
+        return false;
+    }
+
 public static void main(String args[]) {
     linklist ll = new linklist();  // Use your custom linked list, not java.util.LinkedList
-    ll.addFirst(2);
-    ll.addFirst(1);
-    ll.addLast(3);
-    ll.addLast(4);
-    ll.add(2, 9);
-
-    ll.print();
+    // ll.addFirst(2);
+    // ll.addFirst(1);
+    // ll.addLast(3);
+    // ll.addLast(4);
+    // ll.add(2, 9);
+    // ll.print();
     // ll.reverse();
     // ll.print();
     // ll.deletenthnode(3); 
     // ll.print();
-    System.out.print(ll.palindrome()); // use your custom print method
+    // System.out.print(ll.palindrome()); // use your custom print method
     // System.out.println(ll.recSerch(3));
       // now it will work
-
     // System.out.println(ll.size);  // access size directly
+    head=new Node(1);
+    head.next=new Node(2);
+    head.next.next=new Node(3);
+    head.next.next.next=head;
+    //1->2->3->1
+    System.out.println(Cycle());
+    
+
 }
 
 }
