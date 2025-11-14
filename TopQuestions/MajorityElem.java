@@ -22,7 +22,6 @@ public class MajorityElem {
             }
            }
         }
-        System.out.print(candidate);
     }
     public static void main(String args[])
     {
