@@ -18,9 +18,14 @@ int current=1;
 //consecutive
 if(nums[i]==nums[i-1]+1)
 {
-    
+    current++;
 }
-
+else
+{
+    longest=Math.max(longest,current);
+    current=1;
+}
+return Math.max(longest,current);
     }
     }
 
