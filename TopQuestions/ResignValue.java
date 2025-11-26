@@ -3,7 +3,7 @@ package TopQuestions;
 import java.util.*;
 
 public class ResignValue {
-    public static void resignValue(int nums[])
+    public static int[] resignValue(int nums[])
     {
         int positive =0;
         int negative=0;
@@ -21,6 +21,7 @@ public class ResignValue {
                 negative+=2;
             }
         }
+        return arr;
     }
     
     public static void main(String args[])
