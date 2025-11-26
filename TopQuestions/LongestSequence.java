@@ -25,8 +25,8 @@ else
     longest=Math.max(longest,current);
     current=1;
 }
+}
 return Math.max(longest,current);
-    }
     }
 
     public static void main(String args[])
