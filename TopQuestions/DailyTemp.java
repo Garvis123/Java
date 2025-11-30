@@ -6,15 +6,14 @@ public class DailyTemp {
     public static  int[] change(int temp[])
     {
         int arr[]= new int[temp.length];
-        int k=0;
+        
         for(int i=0;i<temp.length;i++)
         {
           for(int j=i+1;j<temp.length;j++)
           {
-            if(temp[i]<temp[j])
+            if(temp[j]>temp[i])
             {
-                arr[k]=j-i;
-                k++;
+                arr[i]=j-i;
                 break;
             }
           }
